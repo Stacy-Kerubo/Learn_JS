@@ -6,3 +6,7 @@ while (scoops>0)
 }
 
 document.write("Life without Ice cream ISN't the same")
+
+if(scoops<3){
+    alert('Ice cream is running low!');
+}
