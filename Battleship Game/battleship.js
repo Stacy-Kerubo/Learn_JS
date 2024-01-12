@@ -14,11 +14,20 @@ while(isSunk==false){
     current_guess=prompt("Ready,Aim ,Fire! (Enter a number between 0-6):")
     // We check validity by making sure the guess is   between zero and six
     if (current_guess<0 || current_guess > 6) {
-        alert("Please entr a valid cell number");
+        alert("Please enter a valid cell number");
     } else{
         guesses=guesses+1;
+        if((current_guess==lcation1 || current_guess==location2 || current_guess==location3)){
+            hits=hits+1;
+            if (hits==3){
+                isSunk=true;
+                alert("You sank my Battleship!")
+            }
+        }else{
+            alert("MISS")
+        }
     }
-
     
-  
 }
+var stats="You took"+ guesses+"guesses to sink battleship"+"which means your shooting accuracy was " + (3/guesses);
+alert(stats);
