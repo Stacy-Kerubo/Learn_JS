@@ -1,7 +1,8 @@
 //Hold location of each cell
-var lcation1=3;
-var location2=4;
-var location3=4;
+var randomLoc=Math.floor(Math.random()*5);
+var lcation1=randomLoc;
+var location2=lcation1+1;
+var location3=location2+1;
 //Users current guess
 var current_guess;
 //Number of hits
